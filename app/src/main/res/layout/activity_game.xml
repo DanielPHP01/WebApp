@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_addcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        android:backgroundTint="#151922"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_addcoin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tv_coins"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="4dp"
+                android:gravity="center"
+                android:text="400"
+                android:textColor="@color/white"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/iv_level"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="100"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_level"
+        app:layout_constraintEnd_toEndOf="@id/iv_level"
+        app:layout_constraintStart_toStartOf="@id/iv_level"
+        app:layout_constraintTop_toTopOf="@id/iv_level" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_images"
+        android:layout_width="316dp"
+        android:layout_height="316dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_level">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_1_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/black"
+            android:padding="4dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@id/cv_1_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:src="@drawable/ic_launcher_background" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_1_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/black"
+            android:padding="4dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cv_1_1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:src="@drawable/ic_launcher_background" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/iv_big_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@drawable/ic_launcher_background"
+            android:translationZ="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="84dp"
+            android:background="@drawable/next_btn_style"
+            android:gravity="center"
+            android:paddingVertical="20dp"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"
+            android:text="Next"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_1_2"
+            tools:layout_editor_absoluteX="34dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationCircle"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/ll_result"
+        app:layout_constraintEnd_toEndOf="@id/ll_result"
+        app:layout_constraintTop_toTopOf="@id/ll_result"
+        app:layout_constraintBottom_toBottomOf="@id/ll_result"/>
+
+    <LinearLayout
+        android:id="@+id/ll_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:translationZ="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_images">
+
+        <TextView
+            android:id="@+id/tv_result_01"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/result_text_view_background"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_result_02"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/result_text_view_background"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_result_03"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/result_text_view_background"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_result_04"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/result_text_view_background"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_result_05"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/result_text_view_background"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_result_06"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/result_text_view_background"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_result_07"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/result_text_view_background"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_result_08"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/result_text_view_background"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_result">
+
+        <LinearLayout
+            android:id="@+id/ll_letters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_entering1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_enter_01"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_02"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_03"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_04"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_05"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_06"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_entering2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/ll_entering1"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_enter_07"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_08"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_09"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_10"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_11"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_enter_12"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/result_text_view_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

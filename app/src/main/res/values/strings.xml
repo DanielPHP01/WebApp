@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Vaidebet</string>
+
+    <string name="for_stability_work_app_you_need_internet_connection">For stability work app you need internet connection</string>
+    <string name="error_key">error</string>
+    <string name="link_key">url</string>
+</resources>

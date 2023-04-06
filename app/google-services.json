@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "467403470418",
+    "project_id": "vaimaxdr",
+    "storage_bucket": "vaimaxdr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467403470418:android:651e0e6b899d758512d18b",
+        "android_client_info": {
+          "package_name": "vaidebet.vai.de.bet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467403470418-hnk3na8ohoe50hql8a4m8h5qsv6fntcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4GYnSd2KH8a-FAFyfAhAs1pj9AQbc4zU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467403470418-hnk3na8ohoe50hql8a4m8h5qsv6fntcn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
